@@ -22,3 +22,8 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+# Node
+npm-debug.log
+/static/node_modules
+/static/bower_components

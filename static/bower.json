@@ -1,0 +1,22 @@
+{
+  "name": "dockerface",
+  "version": "0.0.1",
+  "authors": [
+    "me@marconijr.com"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton": "~2.0.4"
+  }
+}
