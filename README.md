@@ -4,6 +4,10 @@ Docker in your face!
 
 ![Dockerface](http://github.marconijr.com/dockerface/dockerface.png)
 
+### Requirements
+
+    go get github.com/tools/godep
+
 ### Building
 
     ./bin/build
