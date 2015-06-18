@@ -1,0 +1,11 @@
+#!/bin/bash
+
+rm -rf ./dist
+mkdir -p ./dist/static
+cp -r ./src/static/dist ./dist/static
+cp -r ./src/templates ./dist/templates
+
+GOARCH=amd64 GOOS=linux go build -o ./dist/dockerface ./src/cmd/dockerface/main.go
+chmod a+x ./dist/dockerface
+
+docker build -t marconi/dockerface:0.0.1 .
