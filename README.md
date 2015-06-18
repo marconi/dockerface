@@ -10,7 +10,7 @@ Docker in your face!
 
 ### Running
 
-    docker run -p 8080:8080 marconi/dockerface:0.0.1
+    ./bin/run
 
-- For OSX visit http://$(boot2docker ip):8080
-- Others http://127.0.0.1:8080
+- For OSX visit `http://$(boot2docker ip):8080`
+- Others `http://127.0.0.1:8080`
