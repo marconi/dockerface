@@ -20,11 +20,3 @@ _cgo_export.*
 _testmain.go
 
 *.exe
-*.test
-*.prof
-
-# Node
-npm-debug.log
-node_modules
-bower_components
-/dist

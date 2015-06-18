@@ -7,10 +7,10 @@ import (
 	"net/http"
 
 	"github.com/ant0ine/go-json-rest/rest"
-	"github.com/marconi/dockerface"
+	dockerface "github.com/marconi/dockerface/src"
 )
 
-const LISTEN_HOST = "127.0.0.1:8080"
+const LISTEN_HOST = "0.0.0.0:8080"
 
 func home(w http.ResponseWriter, r *http.Request) {
 	homeTpl, err := ioutil.ReadFile("./templates/home.tpl")
