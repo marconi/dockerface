@@ -18,6 +18,7 @@ var ContainerStore = Fluxxor.createStore({
   onContainerFilter: function(params) {
     params = params || [];
     $.getJSON('/api/containers', params, function(data) {
+      this.containers = {}; // reset containers
       $.each(data, function(index, container) {
         this.containers[container.id] = container;
       }.bind(this));
