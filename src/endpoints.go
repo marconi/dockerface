@@ -3,11 +3,21 @@ package dockerface
 import (
 	"fmt"
 	"net/http"
-	"time"
 
 	"github.com/ant0ine/go-json-rest/rest"
 	"github.com/jmcvetta/napping"
 )
+
+type stateContainer struct {
+	State struct {
+		Paused     bool   `json:"paused"`
+		Restarting bool   `json:"restarting"`
+		Running    bool   `json:"running"`
+		FinishedAt string `json:"finishedat"`
+		StartedAt  string `json:"startedat"`
+		ExitCode   int    `json:"exitcode"`
+	} `json:"state"`
+}
 
 type ContainerEndpoint struct{}
 
@@ -37,18 +47,11 @@ func (ce *ContainerEndpoint) Start(w rest.ResponseWriter, req *rest.Request) {
 
 	// if start was successful, retrieve container and return its current state
 	if resp.Status() == http.StatusNoContent {
-		time.Sleep(1000 * time.Millisecond) // give it time
-
-		var result []*Container
-		resp, err := napping.Get(buildUrl("containers/json"), nil, &result, nil)
+		container, err := getContainerState(cid)
 		if err != nil {
 			rest.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-		if resp.Status() == http.StatusOK {
-			if c := filterContainer(result, cid); c != nil {
-				w.WriteJson(c)
-			}
+		} else {
+			w.WriteJson(container)
 		}
 	} else {
 		w.WriteHeader(resp.Status())
@@ -65,30 +68,22 @@ func (ce *ContainerEndpoint) Stop(w rest.ResponseWriter, req *rest.Request) {
 
 	// if stop was successful, retrieve container and return its current state
 	if resp.Status() == http.StatusNoContent {
-		time.Sleep(1000 * time.Millisecond) // give it time
-
-		params := napping.Params{"all": "true"}
-		var result []*Container
-		resp, err := napping.Get(buildUrl("containers/json"), &params, &result, nil)
+		container, err := getContainerState(cid)
 		if err != nil {
 			rest.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-		if resp.Status() == http.StatusOK {
-			if c := filterContainer(result, cid); c != nil {
-				w.WriteJson(c)
-			}
+		} else {
+			w.WriteJson(container)
 		}
 	} else {
 		w.WriteHeader(resp.Status())
 	}
 }
 
-func filterContainer(containers []*Container, cid string) *Container {
-	for _, c := range containers {
-		if c.Id == cid {
-			return c
-		}
+func getContainerState(cid string) (*stateContainer, error) {
+	var container *stateContainer
+	_, err := napping.Get(buildUrl("containers/"+cid+"/json"), nil, &container, nil)
+	if err != nil {
+		return nil, fmt.Errorf("Error getting container state: %v", err)
 	}
-	return nil
+	return container, nil
 }
