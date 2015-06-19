@@ -4,8 +4,7 @@ var React = require('react'),
     Fluxxor = require('fluxxor'),
     classNames = require('classnames'),
     moment = require('moment'),
-    FluxMixin = Fluxxor.FluxMixin(React),
-    sweetAlert = require('sweetalert');
+    FluxMixin = Fluxxor.FluxMixin(React);
 
 var Container  = React.createClass({
   mixins: [FluxMixin],
@@ -38,10 +37,8 @@ var Container  = React.createClass({
 
     if (this.state.isStarting) {
       this.setState({isStarting: false});
-      sweetAlert('Container started', 'Container ' + shortId + ' has been started.', 'success');
     } else if (this.state.isStopping) {
       this.setState({isStopping: false});
-      sweetAlert('Container stopped', 'Container ' + shortId + ' has been stopped.', 'success');
     }
   },
 
