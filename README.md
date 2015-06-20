@@ -10,7 +10,13 @@ Docker in your face!
 
 ### Building
 
+From source:
+
     ./bin/build
+
+Or just pull image from docker hub:
+
+    docker pull marconi/dockerface:0.0.1
 
 ### Running
 
