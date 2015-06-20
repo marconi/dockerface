@@ -3,25 +3,30 @@ package main
 import (
 	"html/template"
 	"io/ioutil"
-	"log"
 	"net/http"
 
+	log "code.google.com/p/log4go"
 	"github.com/ant0ine/go-json-rest/rest"
+
 	dockerface "github.com/marconi/dockerface/src"
 )
 
 const LISTEN_HOST = "0.0.0.0:8080"
 
 func home(w http.ResponseWriter, r *http.Request) {
+	fail := func(err error) {
+		log.Crash("Error reading home template: %v", err)
+	}
+
 	homeTpl, err := ioutil.ReadFile("./templates/home.tpl")
 	if err != nil {
-		log.Fatalln("Error reading home template:", err)
+		fail(err)
 	}
 
 	tmpl := template.New("home")
 	home, err := tmpl.Parse(string(homeTpl))
 	if err != nil {
-		log.Fatalln("Error rendering home template:", err)
+		fail(err)
 	}
 	home.Execute(w, nil)
 }
@@ -40,7 +45,7 @@ func main() {
 		rest.Post("/containers/:id/stop", ce.Stop),
 	)
 	if err != nil {
-		log.Fatal(err)
+		log.Crash("Error making router: %v", err)
 	}
 	api.SetApp(router)
 
@@ -49,6 +54,6 @@ func main() {
 	http.Handle("/api/", http.StripPrefix("/api", api.MakeHandler()))
 	http.HandleFunc("/", home)
 
-	log.Println("Listening on", LISTEN_HOST)
-	log.Fatalln(http.ListenAndServe(LISTEN_HOST, nil))
+	log.Info("Listening on %s", LISTEN_HOST)
+	log.Crash(http.ListenAndServe(LISTEN_HOST, nil))
 }
