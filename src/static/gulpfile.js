@@ -30,7 +30,7 @@ gulp.task('css', function () {
 gulp.task('js', function() {
   gulp.src('src/js/main.jsx')
     .pipe(browserify({transform: 'reactify'}))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(concat('app.min.js'))
     .pipe(gulp.dest('dist/js'));
 });
