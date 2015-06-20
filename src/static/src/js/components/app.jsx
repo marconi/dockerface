@@ -2,13 +2,20 @@
 
 var React = require('react'),
     Fluxxor = require('fluxxor'),
+    NotificationSystem = require('react-notification-system'),
+    Events = require('../events'),
     $ = require('zepto-browserify').$,
     Container = require('./container.jsx'),
+    ContainerStoreMixin = require('../mixins'),
     FluxMixin = Fluxxor.FluxMixin(React),
     StoreWatchMixin = Fluxxor.StoreWatchMixin;
 
 var App = React.createClass({
-  mixins: [FluxMixin, StoreWatchMixin('ContainerStore')],
+  mixins: [
+    FluxMixin,
+    StoreWatchMixin('ContainerStore'),
+    ContainerStoreMixin
+  ],
 
   getInitialState: function() {
     return {
@@ -31,6 +38,22 @@ var App = React.createClass({
     var isShownAll = !this.state.isShownAll;
     this.getFlux().actions.container.filter({all: isShownAll});
     this.setState({isShownAll: isShownAll})
+  },
+
+  onContainerStarted: function(containerId) {
+    this.refs.notification.addNotification({
+      title: 'Container Started',
+      message: 'Container <strong>' + containerId + '</strong> successfully started.',
+      level: 'success'
+    });
+  },
+
+  onContainerStopped: function(containerId) {
+    this.refs.notification.addNotification({
+      title: 'Container Stopped',
+      message: 'Container <strong>' + containerId + '</strong> successfully stopped.',
+      level: 'success'
+    });
   },
 
   render: function() {
@@ -61,6 +84,7 @@ var App = React.createClass({
             {rows}
           </tbody>
         </table>
+        <NotificationSystem ref="notification" allowHTML={true} />
       </div>
     )
   }

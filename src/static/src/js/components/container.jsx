@@ -11,27 +11,19 @@ var Container  = React.createClass({
 
   getInitialState: function() {
     return {
-      shortId: null,
-      hasExited: false,
+      hasExited: this._hasExited(this.props.container),
       disabled: false,
       isStarting: false,
       isStopping: false,
-      waitLabel: 'Wait...'
+      waitLabel: 'Wait...',
+      createdHuman: moment.unix(this.props.container.Created).fromNow()
     };
   },
 
-  componentWillMount: function() {
-    this.setState({
-      shortId: this.props.container.id.slice(0, 12),
-      hasExited: (this.props.container.status.indexOf('Exited') !== -1) ? true : false
-    });
-  },
-
   componentWillReceiveProps: function(nextProps) {
-    var shortId = nextProps.container.id.slice(0, 12);
     this.setState({
-      shortId: shortId,
-      hasExited: (nextProps.container.status.indexOf('Exited') !== -1) ? true : false,
+      hasExited: this._hasExited(nextProps.container),
+      createdHuman: moment.unix(nextProps.container.Created).fromNow(),
       disabled: false
     });
 
@@ -44,17 +36,21 @@ var Container  = React.createClass({
 
   handleStart: function(e) {
     this._disable({isStarting: true});
-    this.getFlux().actions.container.start(this.props.container.id);
+    this.getFlux().actions.container.start(this.props.container.ShortId);
   },
 
   handleStop: function(e) {
     this._disable({isStopping: true});
-    this.getFlux().actions.container.stop(this.props.container.id);
+    this.getFlux().actions.container.stop(this.props.container.ShortId);
   },
 
   _disable: function(moreStates) {
     moreStates = moreStates || {};
     this.setState($.extend({disabled: true}, moreStates));
+  },
+
+  _hasExited: function(container) {
+    return (container.Status.indexOf('Exited') !== -1) ? true : false
   },
 
   render: function() {
@@ -65,7 +61,7 @@ var Container  = React.createClass({
 
     // if image is too long, strip the repo
     // and just retain image name
-    var image = this.props.container.image;
+    var image = this.props.container.Image;
     if (image.length > 20) {
       image = image.split('/')[1];
     }
@@ -92,13 +88,15 @@ var Container  = React.createClass({
     )
 
     return (
-      <tr>
-        <td>{this.state.shortId}</td>
+      <tr className="container">
+        <td>
+          <a href="#">{this.props.container.ShortId}</a>
+        </td>
         <td>{image}</td>
-        <td>{this.props.container.command}</td>
-        <td>{moment.unix(this.props.container.created).fromNow()}</td>
-        <td className={statusClasses}>{this.props.container.status}</td>
-        <td>{action}</td>
+        <td>{this.props.container.Command}</td>
+        <td>{this.state.createdHuman}</td>
+        <td className={statusClasses}>{this.props.container.Status}</td>
+        <td className="action">{action}</td>
       </tr>
     )
   }

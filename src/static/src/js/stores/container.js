@@ -1,5 +1,6 @@
 var Fluxxor = require('fluxxor'),
     Constants = require('../constants'),
+    Events = require('../events'),
     $ = require('zepto-browserify').$,
     _ = require('underscore'),
     moment = require('moment');
@@ -20,7 +21,8 @@ var ContainerStore = Fluxxor.createStore({
     $.getJSON('/api/containers', params, function(data) {
       this.containers = {}; // reset containers
       $.each(data, function(index, container) {
-        this.containers[container.id] = container;
+        container.ShortId = container.Id.slice(0, 12); // compute short id
+        this.containers[container.ShortId] = container;
       }.bind(this));
       this.emit('change');
     }.bind(this));
@@ -29,9 +31,9 @@ var ContainerStore = Fluxxor.createStore({
   onContainerStart: function(containerId) {
     $.post('/api/containers/' + containerId + '/start', function(containerState, status, xhr) {
       if (xhr.status === 200) {
-        status = 'Up ' + moment(containerState.state.startedat).fromNow(true);
-        this.containers[containerId].status = status;
+        this.containers[containerId].Status = 'Up ' + moment(containerState.StartedAt).fromNow(true);
         this.emit('change');
+        this.emit(Events.container.STARTED, containerId);
       } else {
         console.log('something went wrong:');
         console.log(arguments);
@@ -42,9 +44,9 @@ var ContainerStore = Fluxxor.createStore({
   onContainerStop: function(containerId) {
     $.post('/api/containers/' + containerId + '/stop', function(containerState, status, xhr) {
       if (xhr.status === 200) {
-        status = 'Exited ('+ containerState.state.exitcode +') ' + moment(containerState.state.finishedat).fromNow();
-        this.containers[containerId].status = status;
+        this.containers[containerId].Status = 'Exited (0) ' + moment(containerState.FinishedAt).fromNow();
         this.emit('change');
+        this.emit(Events.container.STOPPED, containerId);
       } else {
         console.log('something went wrong:');
         console.log(arguments);
@@ -54,8 +56,8 @@ var ContainerStore = Fluxxor.createStore({
 
   getState: function() {
     return _.sortBy(_.values(this.containers), function(container) {
-      return container.created;
-    });
+      return container.Created;
+    }).reverse();
   }
 });
 

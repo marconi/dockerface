@@ -10,8 +10,7 @@ var uglify = require('gulp-uglify');
 gulp.task('css', function () {
   var contribs = gulp.src([
     'bower_components/skeleton/css/normalize.css',
-    'bower_components/skeleton/css/skeleton.css',
-    'node_modules/sweetalert/dist/sweetalert.css'
+    'bower_components/skeleton/css/skeleton.css'
   ]);
 
   var app = gulp.src('src/less/app.less')

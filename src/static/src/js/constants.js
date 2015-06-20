@@ -1,9 +1,9 @@
 
 var Constants = {
   container: {
-    FILTER: 'CONTAINER:FILTER',
-    START: 'CONTAINER:START',
-    STOP: 'CONTAINER:STOP'
+    FILTER : 'CONTAINER:FILTER',
+    START  : 'CONTAINER:START',
+    STOP   : 'CONTAINER:STOP'
   }
 };
 
