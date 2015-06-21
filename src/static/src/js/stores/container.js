@@ -12,7 +12,8 @@ var ContainerStore = Fluxxor.createStore({
     this.bindActions(
       Constants.container.FILTER, this.onContainerFilter,
       Constants.container.START, this.onContainerStart,
-      Constants.container.STOP, this.onContainerStop
+      Constants.container.STOP, this.onContainerStop,
+      Constants.container.INSPECT, this.onContainerInspect
     );
   },
 
@@ -21,7 +22,7 @@ var ContainerStore = Fluxxor.createStore({
     $.getJSON('/api/containers', params, function(data) {
       this.containers = {}; // reset containers
       _.each(data, function(container, index) {
-        container.ShortId = container.Id.slice(0, 12); // compute short id
+        container.ShortId = this._computeShortId(container);
         this.containers[container.ShortId] = container;
       }.bind(this));
       this.emit('change');
@@ -54,10 +55,21 @@ var ContainerStore = Fluxxor.createStore({
     }.bind(this));
   },
 
+  onContainerInspect: function(containerId) {
+    $.getJSON('/api/containers/' + containerId, [], function(container) {
+      container.ShortId = this._computeShortId(container);
+      this.emit(Events.container.INSPECTED, container);
+    }.bind(this));
+  },
+
   getState: function() {
     return _.sortBy(_.values(this.containers), function(container) {
       return container.Created;
     }).reverse();
+  },
+
+  _computeShortId: function(container) {
+    return container.Id.slice(0, 12);
   }
 });
 

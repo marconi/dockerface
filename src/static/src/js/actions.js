@@ -12,6 +12,10 @@ var Actions = {
 
     stop: function(containerId) {
       this.dispatch(Constants.container.STOP, containerId);
+    },
+
+    inspect: function(containerId) {
+      this.dispatch(Constants.container.INSPECT, containerId);
     }
   }
 };

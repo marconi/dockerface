@@ -3,7 +3,8 @@ var Constants = {
   container: {
     FILTER : 'CONTAINER:FILTER',
     START  : 'CONTAINER:START',
-    STOP   : 'CONTAINER:STOP'
+    STOP   : 'CONTAINER:STOP',
+    INSPECT: 'CONTAINER:INSPECT'
   }
 };
 
