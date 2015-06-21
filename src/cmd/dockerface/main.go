@@ -43,6 +43,7 @@ func main() {
 		rest.Get("/containers", ce.Filter),
 		rest.Post("/containers/:id/start", ce.Start),
 		rest.Post("/containers/:id/stop", ce.Stop),
+		rest.Get("/containers/:id", ce.Inspect),
 	)
 	if err != nil {
 		log.Crash("Error making router: %v", err)

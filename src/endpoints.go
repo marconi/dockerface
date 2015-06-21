@@ -70,3 +70,13 @@ func (ce *ContainerEndpoint) Stop(w rest.ResponseWriter, req *rest.Request) {
 	}
 	w.WriteJson(container.State)
 }
+
+func (ce *ContainerEndpoint) Inspect(w rest.ResponseWriter, req *rest.Request) {
+	cid := req.PathParam("id")
+	container, err := dockerClient.InspectContainer(cid)
+	if err != nil {
+		rest.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	w.WriteJson(container)
+}
