@@ -4,16 +4,18 @@ var React = require('react'),
     Fluxxor = require('fluxxor'),
     FluxMixin = Fluxxor.FluxMixin(React);
 
-var Container = React.createClass({
+var ContainerRowExpanded = React.createClass({
   mixins: [FluxMixin],
 
   render: function() {
     return (
-      <div>
-        Container {this.props.params.containerId}
-      </div>
+      <tr>
+        <td colSpan="6">
+          Container details...
+        </td>
+      </tr>
     )
   }
 });
 
-module.exports = Container;
+module.exports = ContainerRowExpanded;

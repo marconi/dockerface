@@ -7,7 +7,6 @@ var React = require('react'),
     App = require('./components/app.jsx'),
     Containers = require('./components/containers.jsx'),
     ContainersTable = require('./components/containers-table.jsx'),
-    Container = require('./components/container.jsx'),
     Stores = require('./stores/stores'),
     Actions = require('./actions'),
     Route = Router.Route,
@@ -22,7 +21,6 @@ flux.on('dispatch', function(type, payload) {
 var routes = (
   <Route handler={App}>
     <Route name="containers" handler={Containers}>
-      <Route name="container" path=":containerId" handler={Container} />
       <DefaultRoute handler={ContainersTable} />
     </Route>
     <Redirect to="containers" />

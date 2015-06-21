@@ -20,7 +20,7 @@ var ContainerStore = Fluxxor.createStore({
     params = params || [];
     $.getJSON('/api/containers', params, function(data) {
       this.containers = {}; // reset containers
-      $.each(data, function(index, container) {
+      _.each(data, function(container, index) {
         container.ShortId = container.Id.slice(0, 12); // compute short id
         this.containers[container.ShortId] = container;
       }.bind(this));

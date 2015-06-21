@@ -3,8 +3,9 @@
 var React = require('react'),
     Fluxxor = require('fluxxor'),
     Events = require('../events'),
-    $ = require('zepto-browserify').$,
+    _ = require('underscore'),
     ContainerRow = require('./container-row.jsx'),
+    ContainerRowExpanded = require('./container-row-expanded.jsx'),
     FluxMixin = Fluxxor.FluxMixin(React);
 
 var ContainersTable = React.createClass({
@@ -12,8 +13,25 @@ var ContainersTable = React.createClass({
 
   getInitialState: function() {
     return {
-      isShownAll: false
+      isShownAll: false,
+      expanded: {}
     };
+  },
+
+  componentWillReceiveProps: function(nextProps) {
+    var expanded = this.state.expanded;
+    _.each(nextProps.containers, function(container) {
+      if (expanded[container.ShortId] === undefined) {
+        expanded[container.ShortId] = false;
+      }
+    });
+    this.setState({expanded: expanded});
+  },
+
+  toggleExpanded: function(containerId) {
+    var expanded = this.state.expanded;
+    expanded[containerId] = !expanded[containerId];
+    this.setState({expanded: expanded});
   },
 
   handleShowAll: function(e) {
@@ -24,9 +42,24 @@ var ContainersTable = React.createClass({
 
   render: function() {
 
-    var rows = $.map(this.props.containers, function(container, index) {
-      return <ContainerRow key={index} container={container} />
-    });
+    var rows = _.map(this.props.containers, function(container, index) {
+      var containerRows = [
+        <ContainerRow
+          key={'row-' + index}
+          container={container}
+          toggleExpanded={this.toggleExpanded} />
+      ];
+
+      if (this.state.expanded[container.ShortId]) {
+        containerRows.push(
+          <ContainerRowExpanded
+            key={'row-expanded-' + index}
+            container={container} />
+        )
+      }
+
+      return containerRows;
+    }.bind(this));
 
     return (
       <div>

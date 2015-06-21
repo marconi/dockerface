@@ -5,8 +5,7 @@ var React = require('react'),
     Fluxxor = require('fluxxor'),
     classNames = require('classnames'),
     moment = require('moment'),
-    FluxMixin = Fluxxor.FluxMixin(React),
-    Link = Router.Link;
+    FluxMixin = Fluxxor.FluxMixin(React);
 
 var ContainerRow  = React.createClass({
   mixins: [FluxMixin],
@@ -17,6 +16,7 @@ var ContainerRow  = React.createClass({
       disabled: false,
       isStarting: false,
       isStopping: false,
+      isExpanded: false,
       waitLabel: 'Wait...',
       createdHuman: moment.unix(this.props.container.Created).fromNow()
     };
@@ -46,6 +46,12 @@ var ContainerRow  = React.createClass({
     this.getFlux().actions.container.stop(this.props.container.ShortId);
   },
 
+  handleToggleExpanded: function(e) {
+    var isExpanded = !this.state.isExpanded;
+    this.setState({isExpanded: isExpanded});
+    this.props.toggleExpanded(this.props.container.ShortId);
+  },
+
   _disable: function(moreStates) {
     moreStates = moreStates || {};
     this.setState($.extend({disabled: true}, moreStates));
@@ -59,6 +65,10 @@ var ContainerRow  = React.createClass({
 
     var statusClasses = classNames({
       'exited': this.state.hasExited
+    });
+
+    var rowClasses = classNames({
+      'expanded': this.state.isExpanded
     });
 
     // if image is too long, strip the repo
@@ -85,13 +95,11 @@ var ContainerRow  = React.createClass({
     }
 
     return (
-      <tr>
+      <tr className={rowClasses}>
         <td>
-          <Link
-            to="container"
-            params={{containerId: this.props.container.ShortId}}>
+          <a href="#" onClick={this.handleToggleExpanded}>
             {this.props.container.ShortId}
-          </Link>
+          </a>
         </td>
         <td>{image}</td>
         <td>{this.props.container.Command}</td>

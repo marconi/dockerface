@@ -1,4 +1,10 @@
 #containers {
+
+  tr > td:first-child,
+  tr > th:first-child {
+    padding-left: 15px;
+  }
+
   .exited {
     color: @red;
   }
@@ -20,5 +26,15 @@
 
   .action button {
     margin: 0;
-  }  
+  }
+
+  .expanded {
+    background-color: @blue;
+    color: @white;
+
+    a,
+    td {
+      color: @white;
+    }
+  }
 }

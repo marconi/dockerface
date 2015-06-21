@@ -4,9 +4,10 @@ var React = require('react'),
     Router = require('react-router'),
     Fluxxor = require('fluxxor'),
     NotificationSystem = require('react-notification-system'),
-    ContainerStoreMixin = require('../mixins'),
+    Mixins = require('../mixins'),
     FluxMixin = Fluxxor.FluxMixin(React),
-    RouteHandler = Router.RouteHandler;
+    RouteHandler = Router.RouteHandler,
+    ContainerStoreMixin = Mixins.ContainerStoreMixin;
 
 var App = React.createClass({
   mixins: [
