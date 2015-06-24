@@ -3,9 +3,9 @@
 	"GoVersion": "go1.4.1",
 	"Deps": [
 		{
-			"ImportPath": "code.google.com/p/log4go",
-			"Comment": "go.weekly.2012-02-22-1",
-			"Rev": "c3294304d93f48a37d3bed1d382882a9c2989f99"
+			"ImportPath": "github.com/Sirupsen/logrus",
+			"Comment": "v0.8.2-12-g2a0a9a1",
+			"Rev": "2a0a9a12ae2892ccfa9ab59c1222e9dcd29f9367"
 		},
 		{
 			"ImportPath": "github.com/ant0ine/go-json-rest/rest",

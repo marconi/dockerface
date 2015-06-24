@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	log "code.google.com/p/log4go"
+	log "github.com/Sirupsen/logrus"
 	"github.com/ant0ine/go-json-rest/rest"
 	"github.com/fsouza/go-dockerclient"
 )
@@ -28,17 +28,16 @@ func init() {
 		client, err = docker.NewClient(daemonHost)
 	} else {
 		daemonHost = fmt.Sprintf("tcp://%s:%d", getDaemonHostIp(), daemonTLSPort)
-		log.Info("Docker cert path: %s", certPath)
+		log.Infof("Docker cert path: %s", certPath)
 		ca := fmt.Sprintf("%s/ca.pem", certPath)
 		cert := fmt.Sprintf("%s/cert.pem", certPath)
 		key := fmt.Sprintf("%s/key.pem", certPath)
 		client, err = docker.NewTLSClient(daemonHost, cert, key, ca)
 	}
 
-	log.Info("Docker daemon host: %s", daemonHost)
-
+	log.Infof("Docker daemon host: %s", daemonHost)
 	if err != nil {
-		log.Crash("Error initializing docker client: %v", err)
+		log.Fatalf("Error initializing docker client: %v", err)
 	}
 	dockerClient = client
 }
