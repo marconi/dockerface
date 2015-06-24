@@ -3,7 +3,6 @@ package dockerface
 import (
 	"fmt"
 	"net/http"
-	"os"
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/ant0ine/go-json-rest/rest"
@@ -19,19 +18,29 @@ var (
 )
 
 func init() {
-	var daemonHost string
-	var client *docker.Client
-	var err error
-	certPath := os.Getenv("DOCKER_CERT_PATH")
-	if certPath == "" {
+	var (
+		daemonHost string
+		client     *docker.Client
+		err        error
+	)
+
+	// See https://docs.docker.com/reference/commandline/cli/
+	tlsVerify := GetEnv("DOCKER_TLS_VERIFY", "")
+	if tlsVerify == "" {
 		daemonHost = fmt.Sprintf("tcp://%s:%d", getDaemonHostIp(), daemonPort)
 		client, err = docker.NewClient(daemonHost)
 	} else {
-		daemonHost = fmt.Sprintf("tcp://%s:%d", getDaemonHostIp(), daemonTLSPort)
+		certPath := GetEnv("DOCKER_CERT_PATH", "")
+		if certPath == "" {
+			log.Fatal("Using TLS verify but DOCKER_CERT_PATH is empty")
+		}
+
 		log.Infof("Docker cert path: %s", certPath)
-		ca := fmt.Sprintf("%s/ca.pem", certPath)
-		cert := fmt.Sprintf("%s/cert.pem", certPath)
-		key := fmt.Sprintf("%s/key.pem", certPath)
+		ca := GetEnv("TLS_CA", fmt.Sprintf("%s/ca.pem", certPath))
+		cert := GetEnv("TLS_CERT", fmt.Sprintf("%s/cert.pem", certPath))
+		key := GetEnv("TLS_KEY", fmt.Sprintf("%s/key.pem", certPath))
+
+		daemonHost = fmt.Sprintf("tcp://%s:%d", getDaemonHostIp(), daemonTLSPort)
 		client, err = docker.NewTLSClient(daemonHost, cert, key, ca)
 	}
 
