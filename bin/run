@@ -1,2 +1,7 @@
 #!/bin/bash
-docker run -p 8080:8080 marconi/dockerface:0.0.1
+docker run \
+  -p 8080:8080 \
+  -v $DOCKER_CERT_PATH:/certs \
+  -e DOCKER_CERT_PATH=/certs \
+  -e DOCKER_IP \
+  marconi/dockerface:0.0.1
