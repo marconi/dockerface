@@ -6,7 +6,7 @@ import (
 	"os/exec"
 	"strings"
 
-	log "code.google.com/p/log4go"
+	log "github.com/Sirupsen/logrus"
 )
 
 func getDaemonHostIp() string {
@@ -18,7 +18,7 @@ func getDaemonHostIp() string {
 		hostIp = strings.TrimSpace(value)
 	} else {
 		fail := func(err error) {
-			log.Crash("Error retrieving host ip: %v", err)
+			log.Fatalf("Error retrieving host ip: %v", err)
 		}
 
 		// if that didn't work, get ip of host where this container is running

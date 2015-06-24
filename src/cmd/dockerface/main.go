@@ -1,11 +1,12 @@
 package main
 
 import (
+	"flag"
 	"html/template"
 	"io/ioutil"
 	"net/http"
 
-	log "code.google.com/p/log4go"
+	log "github.com/Sirupsen/logrus"
 	"github.com/ant0ine/go-json-rest/rest"
 
 	dockerface "github.com/marconi/dockerface/src"
@@ -15,7 +16,7 @@ const LISTEN_HOST = "0.0.0.0:8080"
 
 func home(w http.ResponseWriter, r *http.Request) {
 	fail := func(err error) {
-		log.Crash("Error reading home template: %v", err)
+		log.Fatalf("Error reading home template: %v", err)
 	}
 
 	homeTpl, err := ioutil.ReadFile("./templates/home.tpl")
@@ -32,6 +33,10 @@ func home(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	lvl := flag.String("log-level", "info", "Set logging level")
+	flag.Parse()
+	setLogLevel(*lvl)
+
 	// init endpoints
 	ce := new(dockerface.ContainerEndpoint)
 
@@ -46,7 +51,7 @@ func main() {
 		rest.Get("/containers/:id", ce.Inspect),
 	)
 	if err != nil {
-		log.Crash("Error making router: %v", err)
+		log.Fatalf("Error making router: %v", err)
 	}
 	api.SetApp(router)
 
@@ -55,6 +60,15 @@ func main() {
 	http.Handle("/api/", http.StripPrefix("/api", api.MakeHandler()))
 	http.HandleFunc("/", home)
 
-	log.Info("Listening on %s", LISTEN_HOST)
-	log.Crash(http.ListenAndServe(LISTEN_HOST, nil))
+	log.Infof("Listening on %s", LISTEN_HOST)
+	log.Fatal(http.ListenAndServe(LISTEN_HOST, nil))
+}
+
+func setLogLevel(lvl string) {
+	logLvl, err := log.ParseLevel(lvl)
+	if err != nil {
+		logLvl = log.InfoLevel
+		log.Warnf("Invalid logging level '%s', defaulting to '%s'", lvl, logLvl.String())
+	}
+	log.SetLevel(logLvl)
 }
