@@ -37,3 +37,11 @@ func getDaemonHostIp() string {
 
 	return hostIp
 }
+
+func GetEnv(name string, alt string) string {
+	value := os.Getenv(name)
+	if value == "" && alt != "" {
+		value = alt
+	}
+	return value
+}
