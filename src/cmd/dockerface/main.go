@@ -7,9 +7,6 @@ import (
 	"net/http"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/ant0ine/go-json-rest/rest"
-
-	dockerface "github.com/marconi/dockerface/src"
 )
 
 const LISTEN_HOST = "0.0.0.0:8080"
@@ -37,27 +34,27 @@ func main() {
 	flag.Parse()
 	setLogLevel(*lvl)
 
-	// init endpoints
-	ce := new(dockerface.ContainerEndpoint)
+	// // init endpoints
+	// ce := new(dockerface.ContainerEndpoint)
 
-	// init API server
-	api := rest.NewApi()
-	api.Use(rest.DefaultDevStack...)
+	// // init API server
+	// api := rest.NewApi()
+	// api.Use(rest.DefaultDevStack...)
 
-	router, err := rest.MakeRouter(
-		rest.Get("/containers", ce.Filter),
-		rest.Post("/containers/:id/start", ce.Start),
-		rest.Post("/containers/:id/stop", ce.Stop),
-		rest.Get("/containers/:id", ce.Inspect),
-	)
-	if err != nil {
-		log.Fatalf("Error making router: %v", err)
-	}
-	api.SetApp(router)
+	// router, err := rest.MakeRouter(
+	// 	rest.Get("/containers", ce.Filter),
+	// 	rest.Post("/containers/:id/start", ce.Start),
+	// 	rest.Post("/containers/:id/stop", ce.Stop),
+	// 	rest.Get("/containers/:id", ce.Inspect),
+	// )
+	// if err != nil {
+	// 	log.Fatalf("Error making router: %v", err)
+	// }
+	// api.SetApp(router)
 
 	// mount handlers
-	http.Handle("/static/", http.StripPrefix("/static", http.FileServer(http.Dir("./static"))))
-	http.Handle("/api/", http.StripPrefix("/api", api.MakeHandler()))
+	http.Handle("/static/", http.StripPrefix("/static", http.FileServer(http.Dir("./static/dist"))))
+	// http.Handle("/api/", http.StripPrefix("/api", api.MakeHandler()))
 	http.HandleFunc("/", home)
 
 	log.Infof("Listening on %s", LISTEN_HOST)

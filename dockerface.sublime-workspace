@@ -1,0 +1,1200 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"message",
+				"messageTransaction	 ν"
+			],
+			[
+				"mess",
+				"messageTransaction	 ν"
+			],
+			[
+				"Hang",
+				"HangupTime	time.Time ν"
+			],
+			[
+				"Call",
+				"CallType	domain.CallType ν"
+			],
+			[
+				"withFie",
+				"WithFields	*logrus.Entry ƒ"
+			],
+			[
+				"EngagementStatus_S",
+				"EngagementStatus_SPAM	 Ɩ"
+			],
+			[
+				"Inf",
+				"Info	 ƒ"
+			],
+			[
+				"preVoi",
+				"preVoiceCallResp	*PreVoiceCall ν"
+			],
+			[
+				"Filter",
+				"FilterEngagementRoute	r []*engagement.EngagementRoute, err error ƒ"
+			],
+			[
+				"Info",
+				"Infof	 ƒ"
+			],
+			[
+				"Mar",
+				"Marshal	[]byte, error ƒ"
+			],
+			[
+				"Me",
+				"MessageSize	int64 ν"
+			],
+			[
+				"carrier",
+				"carrierId	int64 ν"
+			],
+			[
+				"engage",
+				"engagement	*ems.Engagement ν"
+			],
+			[
+				"Engage",
+				"EngagementTypeId	int64 ν"
+			],
+			[
+				"engagemen",
+				"engagementType	*ems.EngagementType ν"
+			],
+			[
+				"con",
+				"contentManager	*libs.ContentManager ν"
+			],
+			[
+				"lang",
+				"language	string ν"
+			],
+			[
+				"Cont",
+				"Contents	[]string ν"
+			],
+			[
+				"trigger",
+				"triggerEntries	map[string]string ν"
+			],
+			[
+				"Engagement",
+				"EngagementActionType	string ν"
+			],
+			[
+				"EngagementAc",
+				"EngagementActionCriteria	struct ʈ"
+			],
+			[
+				"A",
+				"GetActions	[]*engagement.EngagementAction ƒ"
+			],
+			[
+				"ContactTY",
+				"ContactType_DYNAMIC	 Ɩ"
+			],
+			[
+				"Spri",
+				"Sprintf	string ƒ"
+			],
+			[
+				"Conta",
+				"Contact	struct ʈ"
+			],
+			[
+				"Pa",
+				"Paging	struct ʈ"
+			],
+			[
+				"Pagi",
+				"NewPaging	*common.Paging ƒ"
+			],
+			[
+				"Ems",
+				"EmsPort	int ν"
+			],
+			[
+				"EM",
+				"EmsHost	string ν"
+			],
+			[
+				"Contact",
+				"ContactSvc	interface ¡"
+			],
+			[
+				"Re",
+				"ReadAll	[]byte, error ƒ"
+			],
+			[
+				"res",
+				"resp	*http.Response ν"
+			],
+			[
+				"Spr",
+				"Sprintf	string ƒ"
+			],
+			[
+				"EngagementCrei",
+				"EngagementCriteria	struct ʈ"
+			],
+			[
+				"conf",
+				"Config	struct ʈ"
+			],
+			[
+				"write",
+				"writeAppResponseWithHangup	 ƒ"
+			],
+			[
+				"phonenu",
+				"phonenumber"
+			],
+			[
+				"withFi",
+				"WithFields	*logrus.Entry ƒ"
+			],
+			[
+				"wa",
+				"Warn	 ƒ"
+			],
+			[
+				"EngagementStatus",
+				"EngagementStatus_RUNNING	 Ɩ"
+			],
+			[
+				"Retr",
+				"RetrieveByIdOnly	r *engagement.Engagement, err error ƒ"
+			],
+			[
+				"Sour",
+				"SourcedModel	interface ¡"
+			],
+			[
+				"stored",
+				"storedEvents	[]StoredEvent ν"
+			],
+			[
+				"Pr",
+				"Println	n int, err error ƒ"
+			],
+			[
+				"EventSour",
+				"EventSourced	interface ¡"
+			],
+			[
+				"cal",
+				"CallUUID	string ν"
+			],
+			[
+				"Parse",
+				"ParseRingingPayload	*RingingPayload ƒ"
+			],
+			[
+				"PRO",
+				"PROJECT_MAIN	 Ɩ"
+			],
+			[
+				"To",
+				"ToUpper	string ƒ"
+			],
+			[
+				"In",
+				"Info	 ƒ"
+			],
+			[
+				"GetEng",
+				"GetEngagementTypes	r []*engagement.EngagementType, err error ƒ"
+			],
+			[
+				"Get",
+				"GetEngagementTypes	r []*engagement.EngagementType, err error ƒ"
+			],
+			[
+				"Pri",
+				"Printf	n int, err error ƒ"
+			],
+			[
+				"Que",
+				"Queryx	*sqlx.Rows, error ƒ"
+			],
+			[
+				"ge",
+				"GetTableName	string ƒ"
+			],
+			[
+				"st",
+				"storedEvent	StoredEvent ν"
+			],
+			[
+				"Name",
+				"NamedQuery	*sqlx.Rows, error ƒ"
+			],
+			[
+				"restapi",
+				"restapi	*RestApi ν"
+			],
+			[
+				"Ha",
+				"HangupErrorRetries	int64 ν"
+			],
+			[
+				"hang",
+				"hangupTime	*time.Time ν"
+			],
+			[
+				"couch",
+				"couchIds	*couchuuids ν"
+			],
+			[
+				"Send",
+				"Sender	string ν"
+			],
+			[
+				"La",
+				"LastContentId	string ν"
+			],
+			[
+				"call",
+				"callJob	*CallJob ν"
+			],
+			[
+				"engagement",
+				"engagementStart	time.Time ν"
+			],
+			[
+				"Print",
+				"Printf	n int, err error ƒ"
+			],
+			[
+				"NO",
+				"NORMAL_CLEARING	 Ɩ"
+			],
+			[
+				"CallStat",
+				"CallStatus	int ʈ"
+			],
+			[
+				"S",
+				"String	string ƒ"
+			],
+			[
+				"Dai",
+				"DailyTries	int64 ν"
+			],
+			[
+				"Per",
+				"PermittedDays	[]int64 ν"
+			],
+			[
+				"permi",
+				"permittedTimeTo	time.Time ν"
+			],
+			[
+				"per",
+				"permittedTimeTo	time.Time ν"
+			],
+			[
+				"hour",
+				"hourFrom	time.Time ν"
+			],
+			[
+				"Da",
+				"Day	int ƒ"
+			],
+			[
+				"Permi",
+				"PermittedHourFrom	string ν"
+			],
+			[
+				"retr",
+				"retry	RetryCall ν"
+			],
+			[
+				"Fi",
+				"FinishValue	int64 ν"
+			],
+			[
+				"EVER",
+				"EVERY_3_DAYS	 Ɩ"
+			],
+			[
+				"hoursIn",
+				"hoursInHalfDay	 ν"
+			],
+			[
+				"EVE",
+				"EVERY_2_DAYS	 Ɩ"
+			],
+			[
+				"retry",
+				"retryvoice	 package ρ"
+			],
+			[
+				"da",
+				"DailyTries	int64 ν"
+			],
+			[
+				"Lo",
+				"Location	*time.Location ƒ"
+			],
+			[
+				"time",
+				"timezone	string ν"
+			],
+			[
+				"endMess",
+				"endMessageId	string ν"
+			],
+			[
+				"start",
+				"startMessageId	string ν"
+			],
+			[
+				"content",
+				"contentIds	[]string ν"
+			],
+			[
+				"Foo",
+				"Foobar	string ʈ"
+			],
+			[
+				"restap",
+				"restapi	*RestApi ν"
+			],
+			[
+				"Rea",
+				"ReadFile	[]byte, error ƒ"
+			],
+			[
+				"Ca",
+				"CallStatus_COMPLETED	 Ɩ"
+			],
+			[
+				"CallStatus_Re",
+				"CallStatus_RETRY	 Ɩ"
+			],
+			[
+				"WithField",
+				"WithFields	*logrus.Entry ƒ"
+			],
+			[
+				"Err",
+				"Error	 ƒ"
+			],
+			[
+				"ma",
+				"manners	 package ρ"
+			],
+			[
+				"Prin",
+				"Println	 ƒ"
+			],
+			[
+				"ems",
+				"emsClient	engagement.EngagementSvc ν"
+			],
+			[
+				"resta",
+				"restapi	*RestApi ν"
+			],
+			[
+				"Fata",
+				"Fatal	 ƒ"
+			],
+			[
+				"NewEngagementSvcClie",
+				"NewEngagementSvcClientProtocol	*engagement.EngagementSvcClient ƒ"
+			],
+			[
+				"Type",
+				"TypeOf	reflect.Type ƒ"
+			],
+			[
+				"job",
+				"jobType	string ν"
+			],
+			[
+				"CallInf",
+				"CallInfo	struct ʈ"
+			],
+			[
+				"rest",
+				"restapi	*RestApi ν"
+			],
+			[
+				"Ty",
+				"TypeOf	reflect.Type ƒ"
+			],
+			[
+				"callI",
+				"callInfo	*voicepod.CallInfo ν"
+			],
+			[
+				"v",
+				"voicepodQueue	mq.Queue ν"
+			],
+			[
+				"Base",
+				"BaseAdapter	struct ʈ"
+			],
+			[
+				"Source",
+				"SourcedRepository	interface ¡"
+			],
+			[
+				"Masr",
+				"MarshalIndent	[]byte, error ƒ"
+			],
+			[
+				"CallInfo",
+				"CallInfoCreatedEvent	struct ʈ"
+			],
+			[
+				"voiceod",
+				"voicepodName	string ν"
+			],
+			[
+				"D",
+				"DB	struct ʈ"
+			],
+			[
+				"ca",
+				"callInfoRepository	eventsource.SourcedRepository ν"
+			],
+			[
+				"eve",
+				"events_callinfo_seq"
+			],
+			[
+				"Format",
+				"FormatInt	string ƒ"
+			],
+			[
+				"Forma",
+				"FormatInt	string ƒ"
+			],
+			[
+				"Worker",
+				"WorkerBase	struct ʈ"
+			],
+			[
+				"CALL_STATUS",
+				"CALL_STATUS_INCOMPLETE	 Ɩ"
+			],
+			[
+				"CALL_STAT",
+				"CALL_STATUS_RETRIED	 Ɩ"
+			],
+			[
+				"CALL",
+				"CALL_STATUS_RETRYING	 Ɩ"
+			],
+			[
+				"par",
+				"ParseInt	i int64, err error ƒ"
+			],
+			[
+				"Pli",
+				"PlivoRingUrl	string ν"
+			],
+			[
+				"pli",
+				"PlivoAuthToken	string ν"
+			],
+			[
+				"OUt",
+				"OutboundWorker	struct ʈ"
+			],
+			[
+				"NewOut",
+				"NewOutboundWorker	*OutboundWorker ƒ"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 263.0,
+		"last_filter": "pretty",
+		"selected_items":
+		[
+			[
+				"pretty",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"prettyf",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"prett",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				":wq",
+				"Pretty JSON: JSON query with ./jq"
+			],
+			[
+				":W",
+				":w - Save"
+			],
+			[
+				":",
+				":w - Save"
+			],
+			[
+				"import",
+				"GoSublime: Go to imports section"
+			],
+			[
+				":we",
+				":w - Save"
+			],
+			[
+				":s",
+				":w - Save"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Channel"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 457.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/marconi/.gvm/pkgsets/go1.5.3/global/src/github.com/marconi/dockerface"
+	],
+	"file_history":
+	[
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/calls-svc/fields/fields.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/models.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common/services.v2/go/engagement/methods.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc/server_test.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc/domain/types.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common/thrift.v2/engagement.thrift",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/api/dto.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc/strategy/strategy_test.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc/adapter/handler/handler_test.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc/adapter/handler/handler.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc/adapter/engagement_test.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/utils/kv/mock_key_value.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc/strategy/strategy.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc/domain/criteria.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc/domain/engagement.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common/services.v2/go/engagement/ttypes.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common/services.v2/go/common/methods.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/api/utils.go",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/utils/djangoviews.py",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/payment/pre_sending.py",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/payment/urls.py",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/libs/content.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/contacts-svc/domain/contact.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc/domain/contact.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/utils/helpers/types.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/utils/helpers/strings.go",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/backends/motech/engagements.py",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc/server.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/eventsource/repository.go",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/appsx/contact/views/old.py",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/appsx/libs/services/clients.py",
+		"/Users/marconi/envs/engagespark/src/thrift-connector/thrift_connector/connection_pool.py",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/main.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/utils/utils.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/api/cmd/restapi/main.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/api/config.go",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/appsx/contact/urls/index.py",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/appsx/contact/views/new.py",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/processor/cmd/processor/main.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/worker/cmd/worker/main.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/worker/factory.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/worker/adapter.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/worker/worker.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/worker/config.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/events.go",
+		"/Users/marconi/Desktop/main.go",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/backends/motechbackend/channel_adapter.py",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/calls-svc/fields/channeltype/channeltype.go",
+		"/Users/marconi/Desktop/projectile.py",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/organizations/views.py",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/settings.py",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/organizations/urls.py",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/urls.py",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/engagement/urls.py",
+		"/Users/marconi/Desktop/fs_debug.txt",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc/adapter/engagement.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/repository.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/processor/processor.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/calls-svc/fields/plivo/plivo.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/dto.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/api/handlers.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/eventsource/repository_test.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/eventsource/model.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/contacts-svc/strategy/contact.go",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/appsx/engagement/engagements.py",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc/strategy/actions.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc/strategy/execeutors.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc/strategy/trigger_runner.go",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/appsx/engagement/channels.py",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc/domain/models.go",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/appsx/payments/urls/api_v1.py",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/appsx/payments/urls/__init__.py",
+		"/Users/marconi/Desktop/twiliio.log",
+		"/Users/marconi/Desktop/investigate.txt",
+		"/Users/marconi/Desktop/test.sh",
+		"/Users/marconi/Desktop/elm-intro/scoping.elm",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/utils/queue.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc/adapter/job_repo_impl_test.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc/db/migrations/20150807154249_initial-engagement-types.sql",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common/json/job.json",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc/domain/models_test.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/calls-svc/domain/domain.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common/domain/java/com/engagespark/domain/Job.java",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/eventsource/db/migrations/20151129003311_engagement.sql",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/eventsource/db/dbconf.yml",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/calls-svc/fields/messagedirection/message_direction.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common/services.v2/py/customfield/CustomFieldSvc-remote",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/db/migrations/20160202191100_events_messagetransaction.sql",
+		"/Users/marconi/envs/engagespark/projects/es-tools/docker/src/couchdb/entrypoint.sh",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc/strategy/trigger_runner_test.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common/domain/java/com/engagespark/domain/Call.java",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/libs/couchdb.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/libs/couchdb_test.go",
+		"/Users/marconi/Desktop/sip-trace.txt",
+		"/Users/marconi/Desktop/sip-trace.log",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/calls-svc/fields/retry/retry.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/voicefiles/110/121866399f220e2cf68be6e136066840.json",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/calls-svc/domain/domain_test.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/calls-svc/fields/retryvoice/retryvoice.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/calls-svc/fields/retry/repeattype_string.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/utils/mq/mq_client.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/Godeps/_workspace/src/code.google.com/p/log4go/config.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc/cmd/triggersvc/main.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common/json/call.json",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/libs/content_test.go",
+		"/Users/marconi/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/processor/content_test.go",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/engagement/views.py",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/backends/motechbackend/content_adapter.py",
+		"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/backends/motechbackend/engagement_adapter.py",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/voicefiles/107/121866399f220e2cf68be6e13605dbf2.json",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/voicefiles/107/121866399f220e2cf68be6e13605dbf2_answer_0_english.mp3",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/processor/processor_test.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/db/migrations/20160121235517_events_infocall.sql",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/api/freeswitchhangupcause_string.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/utils/mq/iron/iron_mq_impl.go",
+		"/Users/marconi/Desktop/consul.json",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/utils/mq/queuees_string.go",
+		"/Users/marconi/go/src/github.com/marconi/pligo/pligo_test.go",
+		"/Users/marconi/go/src/github.com/marconi/pligo/pligo.go",
+		"/Users/marconi/go/src/github.com/marconi/boltapi/boltapi.go",
+		"/Users/marconi/go/src/github.com/marconi/boltapi/cmd/boltapi/main.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/db/migrations/20160121235517_events_callinfo.sql",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/README.md",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/processor/config.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/utils/mq/projectes_string.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/processor/content.go",
+		"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/db/migrations/20151129003311_events_calljob.sql"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common",
+			"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend",
+			"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark",
+			"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/appsx/payments",
+			"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/utils",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc",
+			"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark",
+			"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/api",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/eventsource",
+			"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark/appsx/engagement",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/utils/helpers",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common/services.v2/go",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/utils/mq",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/processor",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/eventsource",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/utils/mq",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/utils/mq",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/processor",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/utils",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/processor",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/utils/mq",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/processor",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc",
+			"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/processor",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/utils/mq",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc",
+			"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/scylla/engagements-svc",
+			"/Users/marconi/go/src/github.com/iron-io/iron_go3",
+			"/Users/marconi/envs/tramigo/projects/tc-backend",
+			"/Users/marconi/envs/engagespark/projects/engageSPARK-frontend/engageSpark",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common/services.v2",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common/services.v2/java",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/common/thrift.v2",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc/strategy",
+			"/Users/marconi/envs/engagespark/projects/es-tools/docker/src/plivo",
+			"/Users/marconi/go/src/github.com/engagespark/es-micro-services/trigger-svc/strategy",
+			"/Users/marconi/Desktop/thrift-0.9.2"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"INCOMPLETED",
+			"InfoCallStatus",
+			"ErrTransitioningEngagement",
+			"action",
+			"CallStatus",
+			"domain.ENGAGEMENT_STATUS_",
+			"domain.EngagementStatus",
+			"EngagementActionEvent",
+			"es",
+			"EngagementStatus",
+			"SendMethod",
+			"EngagementActionEvents",
+			"EngagementStatus_SPAM",
+			"Unmarshal",
+			"preVoiceCallCheck",
+			"decode_POST_payload_as_JSON_or_return_400",
+			"PreMessageSendingView",
+			"send_message/pre",
+			"payment/send_message/pre",
+			"carrierCounters",
+			"PreMessageSendingView",
+			"send_message/pre",
+			"payment/send_message/pre",
+			"content.",
+			"Content",
+			"actionToTriggers",
+			"actionToTrigger",
+			".Keyword.Get",
+			".Keyword.Value",
+			".Keyword().Value",
+			".Keyword().Get",
+			"NullString",
+			"actions",
+			"GetEngagementActionTypes",
+			"et",
+			"EngagementActionType",
+			"GetActions",
+			"triggers",
+			"getPhoneNumberCarrierId",
+			"applyDialingCode",
+			"normalizePhoneNumber",
+			"Ems",
+			"serviceClient",
+			"engagementSvcClient",
+			"engagementMultiProtocol",
+			"NewTMultiplexedProtocol",
+			"_createCllient",
+			"ClientPoolMux",
+			"ems",
+			"Ems",
+			"phoneNumber",
+			"toPhoneNumber",
+			"fromPhoneNumber",
+			"'+'",
+			"CountryCodePhoneNumberView",
+			"country_code_phone_number",
+			"getChannelByDID",
+			"NewOutboundWorker",
+			"s",
+			"SendMethod",
+			"0.1",
+			"weight",
+			"PHONE",
+			"DID",
+			"did",
+			"getChannel",
+			"channel",
+			"channel-",
+			"INBOUND",
+			"hangup_after_bridge",
+			"hangup_after",
+			"RequestUUID",
+			"InfoCallStatus",
+			".Statu",
+			"hasMatchingInfoCalls",
+			"ErrRetrievingInfoCallsBySentIds",
+			"-",
+			"ErrRetrievingInfoCallsBySentIds",
+			"sortByInitiateCallTime",
+			"updateCallStatus",
+			"voicepod.",
+			"github.com/engagespark/es-micro-services/voicepod-svc",
+			"saveInfoCall",
+			"byInitiateCallTime",
+			"ByAge",
+			"GetByVoiceTransactionId",
+			"CreateInstanceFromHistory",
+			"sourcedModels",
+			"ex",
+			"eventsBySourceId[storedEvent.SourceId]",
+			"events",
+			"map[string][]",
+			"event",
+			"_, engagement := range engagements {\n			// 	fmt.Printf(\"\\n\\n%+v\\n\\n\", engagement)\n			// 	// if engagement.(*Engagement).Id == \"3\" {\n			// 	// 	So(engagement.(*Engagement).Id, ShouldEqual, \"3\")\n			// 	// 	So(engagement.(*Engagement).Name, ShouldEqual, \"Blast-5x\")\n			// 	// } else if engagement.(*Engagement).Id == \"4\" {\n			// 	// 	So(engagement.(*Engagement).Id, ShouldEqual, \"4\")\n			// 	// 	So(engagement.(*Engagement).Name, ShouldEqual, \"Blast-6x\")\n			// 	// }\n			// }",
+			"sourceMap",
+			"2",
+			"engagement6",
+			"engagement5",
+			"engagement4",
+			"engagement3",
+			"ErrRepoSourceNotFound",
+			"plivo",
+			"outboundRoutes",
+			"channel",
+			"get_channel_type",
+			"_get_engagement_outbound_routes",
+			"EngagementRoute",
+			"launchEngagement",
+			"639064154172",
+			"100",
+			"SipTransfer",
+			")\n",
+			"job",
+			"HangupPayload",
+			"AdditionalObject",
+			"JsonObject",
+			"scheduleNextCall",
+			"LaunchTime",
+			"Job{}",
+			"triggeringContactId",
+			"Fields",
+			" eventsource.EventSourced",
+			"EngagementNameChanged",
+			" ?\",",
+			"int64(1)",
+			"int64(3)",
+			" int64(3)",
+			"int64(2)"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"engagement.EngagementStatus_",
+			"fields.CallStatus_",
+			"callStatusMap",
+			"infoCall",
+			"InfoCall",
+			"log.",
+			"log.WithFields",
+			"github.com/golang/mock/gomock"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.9o:///Users/marconi/go/src/github.com/engagespark/es-micro-services/calls-svc/domain":
+	{
+		"height": 92.0
+	},
+	"output.9o:///Users/marconi/go/src/github.com/engagespark/es-micro-services/utils/mq":
+	{
+		"height": 92.0
+	},
+	"output.9o:///Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc":
+	{
+		"height": 92.0
+	},
+	"output.9o:///Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/api":
+	{
+		"height": 92.0
+	},
+	"output.9o:///Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/api/cmd/restapi":
+	{
+		"height": 92.0
+	},
+	"output.9o:///Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/db/migrations":
+	{
+		"height": 92.0
+	},
+	"output.9o:///Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/eventsource":
+	{
+		"height": 92.0
+	},
+	"output.9o:///Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/libs":
+	{
+		"height": 92.0
+	},
+	"output.9o:///Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/utils":
+	{
+		"height": 92.0
+	},
+	"output.9o:///Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/worker":
+	{
+		"height": 92.0
+	},
+	"output.9o:///Users/marconi/go/src/github.com/engagespark/es-micro-services/voicepod-svc/worker/cmd/worker":
+	{
+		"height": 92.0
+	},
+	"output.GoSublime-main-output":
+	{
+		"height": 92.0
+	},
+	"output.GoSublime-output":
+	{
+		"height": 415.0
+	},
+	"output.GsDoc-output-output":
+	{
+		"height": 92.0
+	},
+	"output.MarGo-output":
+	{
+		"height": 96.0
+	},
+	"output.elm_type":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "dockerface.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"fields.go",
+				"es-micro-services/calls-svc/fields/fields.go"
+			],
+			[
+				"models.go",
+				"es-micro-services/voicepod-svc/models.go"
+			],
+			[
+				"methods.go",
+				"es-micro-services/common/services.v2/go/engagement/methods.go"
+			],
+			[
+				"event",
+				"es-micro-services/voicepod-svc/events.go"
+			],
+			[
+				"dto.go",
+				"es-micro-services/voicepod-svc/api/dto.go"
+			],
+			[
+				"reposio",
+				"es-micro-services/voicepod-svc/eventsource/repository.go"
+			],
+			[
+				"repo",
+				"es-micro-services/voicepod-svc/repository.go"
+			],
+			[
+				"dto.",
+				"es-micro-services/voicepod-svc/api/dto.go"
+			],
+			[
+				"models.",
+				"es-micro-services/voicepod-svc/models.go"
+			],
+			[
+				"models",
+				"es-micro-services/voicepod-svc/models.go"
+			],
+			[
+				"ada",
+				"es-micro-services/voicepod-svc/worker/adapter.go"
+			],
+			[
+				"fact",
+				"es-micro-services/voicepod-svc/worker/factory.go"
+			],
+			[
+				"fields",
+				"es-micro-services/common/services.v2/py/customfield/CustomFieldSvc-remote"
+			],
+			[
+				"dto",
+				"es-micro-services/voicepod-svc/api/dto.go"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/envs/tramigo/projects/tramigo.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 248.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

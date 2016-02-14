@@ -7,19 +7,15 @@
   <meta name="author" content="me@marconijr.com">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/static/dist/css/app.min.css">
-  <script src="/static/dist/js/app.min.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="stylesheet" href="/static/css/app.min.css">
 </head>
 <body>
-
-  <div class="container">
-    <div class="row">
-      <div class="twelve columns" style="margin-top: 10%">
-        <div id="app"></div>
-      </div>
-    </div>
-  </div>
-
 </body>
+
+<script src="/static/js/debug.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/Dockerface.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var app = Elm.fullscreenDebug('Dockerface', 'Dockerface.elm');
+</script>
+
 </html>

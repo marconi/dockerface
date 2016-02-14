@@ -1,16 +1,15 @@
 var gulp = require('gulp');
 var merge = require('merge-stream');
 var concat = require('gulp-concat');
-var minifyCSS = require('gulp-minify-css');
+var cssnano = require('gulp-cssnano');
 var less = require('gulp-less');
 var path = require('path');
-var browserify = require('gulp-browserify');
-var uglify = require('gulp-uglify');
+var plumber = require('gulp-plumber');
+var elm = require('gulp-elm');
 
 gulp.task('css', function () {
   var contribs = gulp.src([
-    'bower_components/skeleton/css/normalize.css',
-    'bower_components/skeleton/css/skeleton.css'
+    'node_modules/milligram/dist/milligram.css',
   ]);
 
   var app = gulp.src('src/less/app.less')
@@ -22,22 +21,23 @@ gulp.task('css', function () {
     }));
 
   merge(contribs, app)
-    .pipe(minifyCSS())
+    .pipe(plumber())
+    .pipe(cssnano())
     .pipe(concat('app.min.css'))
     .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('js', function() {
-  gulp.src('src/js/main.jsx')
-    .pipe(browserify({transform: 'reactify'}))
-    // .pipe(uglify())
-    .pipe(concat('app.min.js'))
+gulp.task('elm-init', elm.init);
+gulp.task('elm', ['elm-init'], function() {
+  return gulp.src('src/elm/Dockerface.elm')
+    .pipe(plumber())
+    .pipe(elm())
     .pipe(gulp.dest('dist/js'));
-});
+})
 
-gulp.task('build', ['css', 'js']);
+gulp.task('build', ['css', 'elm']);
 
 gulp.task('default', ['build'], function() {
   gulp.watch('src/less/**/*.less', ['css']);
-  gulp.watch('src/js/**/*', ['js']);
+  gulp.watch('src/elm/**/*.elm', ['elm']);
 });
